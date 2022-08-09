@@ -123,5 +123,16 @@ class BackendController {
                           completion: completion)
     }
     
+    func getMovieVideo(id:Int,
+                      completion: @escaping (Bool, JSON) -> ()) {
+        
+        serverCallWithUrl(apiUrl: "\(baseURL)/movie/\(id)/videos?api_key=\(api_key)&type=Trailer",
+                          token: "",
+                          method: .get,
+                          params: nil,
+                          encodingUrl:  JSONEncoding.default,
+                          completion: completion)
+    }
+    
    
 }

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import youtube_ios_player_helper
 
 class WatchDetailVC: UIViewController {
     
@@ -16,12 +17,16 @@ class WatchDetailVC: UIViewController {
     @IBOutlet weak var movieIMV: UIImageView!
     @IBOutlet weak var btnTrailler: UIButton!
     
-    var id: Int? = nil
+    @IBOutlet weak var playerContaier: YTPlayerView!
+    @IBOutlet weak var playerView: YTPlayerView!
     
+    var id: Int? = nil
     var arrGenre = [Genre]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        playerView.delegate = self
         
         if let ptcTBC = tabBarController as? PTCardTabBarController {
             ptcTBC.customTabBar.isHidden = true
@@ -33,41 +38,33 @@ class WatchDetailVC: UIViewController {
         
     }
     
-    func loadData() {
-        //LOADDATA
-        if let id = id {
-            BackendController.sharedConrtoller().getMovieInfo(id: id) { success, response in
-                if success {
-                    
-                    let movieInfo:MovieInfo = try! JSONDecoder().decode(MovieInfo.self, from: response.rawData())
-                    
-                    let dateFormatter = DateFormatter()
-                    dateFormatter.dateFormat = "yyyy-MM-dd"
-                    if let date = dateFormatter.date(from: movieInfo.releaseDate) {
-                        
-                        dateFormatter.dateFormat = "MMM d, yyyy"
-                        let newDate = dateFormatter.string(from: date)
-                        
-                        
-                        self.lblDate.text = "In Theaters \(newDate)"
-                    }
-                    
-                    self.movieIMV.loading()
-                    self.movieIMV.kf.setImage(with: movieInfo.posterURL)
-                    self.txtOverView.text = movieInfo.overview
-                    
-                    self.arrGenre = movieInfo.genres
-                    self.genreCV.reloadData()
-                }
-            }
-        }
+    func stopPlayer() {
+        playerView.stopVideo()
+        playerContaier.isHidden = true
     }
-    
+        
     @IBAction func actionGetTicket(_ sender: Any) {
         
     }
     
     @IBAction func actionTrailer(_ sender: Any) {
+        
+        if let id = id {
+            BackendController.sharedConrtoller().getMovieVideo(id: id) { success, response in
+                    
+                if success {
+                    let movieTrailler:MovieTrailler = try! JSONDecoder().decode(MovieTrailler.self, from: response.rawData())
+                    let trailer = movieTrailler.results.filter { $0.name == "Official Trailer" }
+                    if trailer.count > 0 {
+                        self.playerContaier.isHidden = false
+                        self.playerView.load(withVideoId: trailer[0].key, playerVars: ["playsinline": "0"])
+                    }else{
+                        self.showToast(message: "Trailer url not found.", font: UIFont(name: "Poppins-Regular", size: 14.0)!)
+                    }
+                }
+                
+            }
+        }
         
     }
     
@@ -77,4 +74,7 @@ class WatchDetailVC: UIViewController {
         }
     }
     
+    @IBAction func actionDissmissPlayer(_ sender: Any) {
+        stopPlayer()
+    }
 }

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		040F035B28A2D9440011012A /* MovieTrailler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040F035A28A2D9440011012A /* MovieTrailler.swift */; };
+		040F035D28A2EB210011012A /* WatchDetailVC-YTPlayerViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040F035C28A2EB210011012A /* WatchDetailVC-YTPlayerViewDelegate.swift */; };
+		040F035F28A2EB6E0011012A /* WatchDetailVC-LoadData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040F035E28A2EB6E0011012A /* WatchDetailVC-LoadData.swift */; };
 		047E474928A0318600AF19EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047E474828A0318600AF19EE /* AppDelegate.swift */; };
 		047E474B28A0318600AF19EE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047E474A28A0318600AF19EE /* SceneDelegate.swift */; };
 		047E474D28A0318600AF19EE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047E474C28A0318600AF19EE /* ViewController.swift */; };
@@ -88,6 +91,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		040F035A28A2D9440011012A /* MovieTrailler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTrailler.swift; sourceTree = "<group>"; };
+		040F035C28A2EB210011012A /* WatchDetailVC-YTPlayerViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WatchDetailVC-YTPlayerViewDelegate.swift"; sourceTree = "<group>"; };
+		040F035E28A2EB6E0011012A /* WatchDetailVC-LoadData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WatchDetailVC-LoadData.swift"; sourceTree = "<group>"; };
 		047E474528A0318600AF19EE /* tentwenty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tentwenty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		047E474828A0318600AF19EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		047E474A28A0318600AF19EE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -357,6 +363,7 @@
 				047E47E028A2181A00AF19EE /* UpcomingMovie.swift */,
 				047E47E428A23E5000AF19EE /* GenerList.swift */,
 				047E47F628A277F900AF19EE /* MovieInfo.swift */,
+				040F035A28A2D9440011012A /* MovieTrailler.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -421,8 +428,10 @@
 			isa = PBXGroup;
 			children = (
 				047E47F228A262CB00AF19EE /* WatchDetailVC.swift */,
+				040F035E28A2EB6E0011012A /* WatchDetailVC-LoadData.swift */,
 				047E47F828A281F400AF19EE /* WatchDetailVC-Delegate.swift */,
 				047E47FA28A281FA00AF19EE /* WatchDetailVC-DataSource.swift */,
+				040F035C28A2EB210011012A /* WatchDetailVC-YTPlayerViewDelegate.swift */,
 			);
 			path = WatchDetail;
 			sourceTree = "<group>";
@@ -523,6 +532,7 @@
 				TargetAttributes = {
 					047E474428A0318600AF19EE = {
 						CreatedOnToolsVersion = 13.3.1;
+						LastSwiftMigration = 1340;
 					};
 					047E475A28A0318800AF19EE = {
 						CreatedOnToolsVersion = 13.3.1;
@@ -716,6 +726,7 @@
 				047E47DD28A2167300AF19EE /* WatchVC-Delegate.swift in Sources */,
 				047E477E28A0E07300AF19EE /* UIView+AutoLayout.swift in Sources */,
 				047E47E528A23E5000AF19EE /* GenerList.swift in Sources */,
+				040F035B28A2D9440011012A /* MovieTrailler.swift in Sources */,
 				047E47E328A21E3400AF19EE /* UIImageView.swift in Sources */,
 				047E47F328A262CB00AF19EE /* WatchDetailVC.swift in Sources */,
 				047E47EF28A25B4800AF19EE /* WatchVC-TextField.swift in Sources */,
@@ -728,10 +739,12 @@
 				047E474928A0318600AF19EE /* AppDelegate.swift in Sources */,
 				047E47E728A242C100AF19EE /* SearchMovieCell.swift in Sources */,
 				047E47E128A2181A00AF19EE /* UpcomingMovie.swift in Sources */,
+				040F035F28A2EB6E0011012A /* WatchDetailVC-LoadData.swift in Sources */,
 				047E47F728A277F900AF19EE /* MovieInfo.swift in Sources */,
 				047E47D728A214CD00AF19EE /* UIAlertController.swift in Sources */,
 				047E47E928A2463700AF19EE /* String.swift in Sources */,
 				047E478F28A0E43D00AF19EE /* WatchVC.swift in Sources */,
+				040F035D28A2EB210011012A /* WatchDetailVC-YTPlayerViewDelegate.swift in Sources */,
 				047E479128A0E45300AF19EE /* LibraryVC.swift in Sources */,
 				047E47F528A270A200AF19EE /* GenreCell.swift in Sources */,
 				047E47EB28A255D300AF19EE /* UIViewController.swift in Sources */,
@@ -916,6 +929,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = TH3422P4U2;
@@ -935,6 +949,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.arslanahmad.tentwenty;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -946,6 +962,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = TH3422P4U2;
@@ -965,6 +982,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.arslanahmad.tentwenty;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

@@ -9,6 +9,7 @@ target 'tentwenty' do
 
   pod 'Alamofire', '~> 5.2'
   pod 'Kingfisher'
+  pod "youtube-ios-player-helper"
 
   target 'tentwentyTests' do
     inherit! :search_paths

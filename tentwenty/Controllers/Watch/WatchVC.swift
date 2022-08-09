@@ -91,7 +91,6 @@ class WatchVC: UIViewController {
         if let searchText = sender.text {
             
             if !searchText.isBlank {
-                print("text")
                 if homeTopBar.isHidden {
                     topResultHeight.constant = 50
                 }
@@ -100,7 +99,6 @@ class WatchVC: UIViewController {
                 searchCatView.isHidden = true
                 reloadMovies(searchKey: searchText)
             }else{
-                print("empty")
                 topResultHeight.constant = 0
                 moviesCV.isHidden = true
                 searchCatView.isHidden = false

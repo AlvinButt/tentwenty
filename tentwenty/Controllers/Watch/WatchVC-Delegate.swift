@@ -15,8 +15,6 @@ extension WatchVC: UICollectionViewDelegate {
         let watchMovie = searchActive && homeTopBar.isHidden ? self.filterUpComingMovies[indexPath.row] : self.upComingMovies[indexPath.row]
         let vc = storyboard?.instantiateViewController(withIdentifier: "WatchDetailVCID") as! WatchDetailVC
         vc.id = watchMovie.id
-        self.navigationController?.pushViewController(vc, animated: true)
-        print(indexPath)
-        
+        self.navigationController?.pushViewController(vc, animated: true)        
     }
 }
