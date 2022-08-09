@@ -1,0 +1,6 @@
+framework module Pods_tentwenty {
+  umbrella header "Pods-tentwenty-umbrella.h"
+
+  export *
+  module * { export * }
+}
