@@ -10,6 +10,9 @@
 		040F035B28A2D9440011012A /* MovieTrailler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040F035A28A2D9440011012A /* MovieTrailler.swift */; };
 		040F035D28A2EB210011012A /* WatchDetailVC-YTPlayerViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040F035C28A2EB210011012A /* WatchDetailVC-YTPlayerViewDelegate.swift */; };
 		040F035F28A2EB6E0011012A /* WatchDetailVC-LoadData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040F035E28A2EB6E0011012A /* WatchDetailVC-LoadData.swift */; };
+		040F036128A2F5C10011012A /* SeatMapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040F036028A2F5C10011012A /* SeatMapVC.swift */; };
+		040F036428A3708E0011012A /* MapTicketCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040F036328A3708E0011012A /* MapTicketCell.swift */; };
+		040F036728A37FCA0011012A /* SeatMappingDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040F036628A37FCA0011012A /* SeatMappingDetailVC.swift */; };
 		047E474928A0318600AF19EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047E474828A0318600AF19EE /* AppDelegate.swift */; };
 		047E474B28A0318600AF19EE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047E474A28A0318600AF19EE /* SceneDelegate.swift */; };
 		047E474D28A0318600AF19EE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047E474C28A0318600AF19EE /* ViewController.swift */; };
@@ -94,6 +97,9 @@
 		040F035A28A2D9440011012A /* MovieTrailler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTrailler.swift; sourceTree = "<group>"; };
 		040F035C28A2EB210011012A /* WatchDetailVC-YTPlayerViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WatchDetailVC-YTPlayerViewDelegate.swift"; sourceTree = "<group>"; };
 		040F035E28A2EB6E0011012A /* WatchDetailVC-LoadData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WatchDetailVC-LoadData.swift"; sourceTree = "<group>"; };
+		040F036028A2F5C10011012A /* SeatMapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeatMapVC.swift; sourceTree = "<group>"; };
+		040F036328A3708E0011012A /* MapTicketCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapTicketCell.swift; sourceTree = "<group>"; };
+		040F036628A37FCA0011012A /* SeatMappingDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeatMappingDetailVC.swift; sourceTree = "<group>"; };
 		047E474528A0318600AF19EE /* tentwenty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tentwenty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		047E474828A0318600AF19EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		047E474A28A0318600AF19EE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -195,6 +201,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		040F036228A2F5C80011012A /* SeatMapping */ = {
+			isa = PBXGroup;
+			children = (
+				040F036528A37F950011012A /* SeatMappingDetail */,
+				040F036028A2F5C10011012A /* SeatMapVC.swift */,
+			);
+			path = SeatMapping;
+			sourceTree = "<group>";
+		};
+		040F036528A37F950011012A /* SeatMappingDetail */ = {
+			isa = PBXGroup;
+			children = (
+				040F036628A37FCA0011012A /* SeatMappingDetailVC.swift */,
+			);
+			path = SeatMappingDetail;
+			sourceTree = "<group>";
+		};
 		047E473C28A0318600AF19EE = {
 			isa = PBXGroup;
 			children = (
@@ -383,6 +406,7 @@
 				047E47D028A13D5E00AF19EE /* MovieCell.swift */,
 				047E47E628A242C100AF19EE /* SearchMovieCell.swift */,
 				047E47F428A270A200AF19EE /* GenreCell.swift */,
+				040F036328A3708E0011012A /* MapTicketCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -399,6 +423,7 @@
 			isa = PBXGroup;
 			children = (
 				047E47F128A262A800AF19EE /* WatchDetail */,
+				040F036228A2F5C80011012A /* SeatMapping */,
 				047E478E28A0E43D00AF19EE /* WatchVC.swift */,
 				047E47DE28A216F600AF19EE /* WatchVC-DataSource.swift */,
 				047E47DC28A2167300AF19EE /* WatchVC-Delegate.swift */,
@@ -732,6 +757,7 @@
 				047E47EF28A25B4800AF19EE /* WatchVC-TextField.swift in Sources */,
 				047E478D28A0E42400AF19EE /* DashboardVC.swift in Sources */,
 				047E47DF28A216F600AF19EE /* WatchVC-DataSource.swift in Sources */,
+				040F036428A3708E0011012A /* MapTicketCell.swift in Sources */,
 				047E478028A0E07300AF19EE /* CGPoint+Distance.swift in Sources */,
 				047E47ED28A2566A00AF19EE /* WatchVC-LoadData.swift in Sources */,
 				047E478628A0E09E00AF19EE /* PTIndicatorView.swift in Sources */,
@@ -745,10 +771,12 @@
 				047E47E928A2463700AF19EE /* String.swift in Sources */,
 				047E478F28A0E43D00AF19EE /* WatchVC.swift in Sources */,
 				040F035D28A2EB210011012A /* WatchDetailVC-YTPlayerViewDelegate.swift in Sources */,
+				040F036728A37FCA0011012A /* SeatMappingDetailVC.swift in Sources */,
 				047E479128A0E45300AF19EE /* LibraryVC.swift in Sources */,
 				047E47F528A270A200AF19EE /* GenreCell.swift in Sources */,
 				047E47EB28A255D300AF19EE /* UIViewController.swift in Sources */,
 				047E478828A0E09E00AF19EE /* PTCardTabBarController.swift in Sources */,
+				040F036128A2F5C10011012A /* SeatMapVC.swift in Sources */,
 				047E474B28A0318600AF19EE /* SceneDelegate.swift in Sources */,
 				047E47D528A2137C00AF19EE /* SwiftyJSON.swift in Sources */,
 				047E47D328A2134900AF19EE /* BackendController.swift in Sources */,

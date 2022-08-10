@@ -8,6 +8,7 @@
 import UIKit
 
 class GenreCell: UICollectionViewCell {
+    @IBOutlet weak var lblBg: UIView!
     @IBOutlet weak var lblName: UILabel!
     
 }

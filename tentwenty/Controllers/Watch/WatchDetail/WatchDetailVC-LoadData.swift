@@ -34,6 +34,8 @@ extension WatchDetailVC {
                     
                     self.arrGenre = movieInfo.genres
                     self.genreCV.reloadData()
+                    
+                    self.name = movieInfo.title
                 }
             }
         }

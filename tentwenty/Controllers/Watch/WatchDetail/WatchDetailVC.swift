@@ -22,6 +22,7 @@ class WatchDetailVC: UIViewController {
     
     var id: Int? = nil
     var arrGenre = [Genre]()
+    var name:String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,7 +45,10 @@ class WatchDetailVC: UIViewController {
     }
         
     @IBAction func actionGetTicket(_ sender: Any) {
-        
+        let vc = storyboard?.instantiateViewController(withIdentifier: "SeatMapVCID") as! SeatMapVC
+        vc.date = lblDate.text ?? ""
+        vc.name = name
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     @IBAction func actionTrailer(_ sender: Any) {
